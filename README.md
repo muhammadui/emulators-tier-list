@@ -1,4 +1,4 @@
-# Multi-Platform Emulation Registry by Host Operating System
+# Cross-Platform Video Game Console Emulation Tier List
 
 A system-by-system matrix categorizing S-Tier and A-Tier desktop and mobile emulators, prioritized by native architecture compatibility.
 
