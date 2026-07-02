@@ -1,63 +1,85 @@
-# Desktop and Mobile Emulation Tier List (macOS / Windows / Linux / Android / iOS)
+# Multi-Platform Emulation Registry by Host Operating System
 
-A curated catalog of the highest-performing emulators across primary desktop and mobile operating systems. All recommendations isolate performance, accuracy, and active maintenance architecture.
-
----
-
-## 1. Nintendo Platforms
-
-### Retro / Handheld (NES, SNES, GB, GBA, NDS)
-
-| Generation | Tier | Emulator | macOS (ARM64) | Windows (x64) | Linux (x64) | Android | iOS | Download Link |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **All-in-One Retro** | **S** | RetroArch | Native | Native | Native | Native | Native | [retroarch.com](https://www.retroarch.com/) |
-|  | **A** | Lemuroid / Delta | N/A | N/A | N/A | Native | Native | [deltaemulator.com](https://deltaemulator.com/) |
-| **Nintendo DS** | **S** | melonDS | Native | Native | Native | Native | Native | [suspicious link removed] |
-|  | **A** | DraStic | N/A | N/A | N/A | Native | N/A | [play.google.com](https://www.google.com/search?q=https://play.google.com/store/apps/details%3Fid%3Dcom.dsemu.drastic) |
-
-### Home Consoles & Hybrid (N64, GameCube, Wii, Switch)
-
-| Generation | Tier | Emulator | macOS (ARM64) | Windows (x64) | Linux (x64) | Android | iOS | Download Link |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Nintendo 64** | **S** | Ares | Native | Native | Native | N/A | N/A | [ares-emu.net](https://ares-emu.net/) |
-|  | **A** | Mupen64Plus FZ | N/A | N/A | N/A | Native | N/A | [mupen64plus.org](https://mupen64plus.org/) |
-| **GameCube / Wii** | **S** | Dolphin | Native | Native | Native | Native | Side-load | [dolphin-emu.org](https://dolphin-emu.org/) |
-|  | **A** | JIT-less Dolphin | N/A | N/A | N/A | N/A | App Store | [OatmealDome/Dolphiiini](https://www.google.com/search?q=https://github.com/OatmealDome/Dolphiiini) |
-| **Nintendo Switch** | **S** | Ryubing / Ryujinx Forks | Native | Native | Native | N/A | N/A | [github.com/Ryujinx](https://github.com/Ryujinx) |
-|  | **A** | Sudachi / Uzuy | N/A | Native | Native | Native | N/A | [sudachiemulator.org](https://sudachiemulator.org/) |
+A system-by-system matrix categorizing S-Tier and A-Tier desktop and mobile emulators, prioritized by native architecture compatibility.
 
 ---
 
-## 2. Sega Platforms
+## 1. Apple Ecosystem
 
-| Generation | Tier | Emulator | macOS (ARM64) | Windows (x64) | Linux (x64) | Android | iOS | Download Link |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **Genesis / Saturn** | **S** | RetroArch (Beetle / Genesis Plus GX) | Native | Native | Native | Native | Native | [retroarch.com](https://www.retroarch.com/) |
-|  | **A** | Yaba Sanshiro 2 | N/A | Native | N/A | Native | N/A | [uoyabause.org](https://www.uoyabause.org/) |
-| **Dreamcast** | **S** | Flycast | Native | Native | Native | Native | Native | [flyinghead.github.io](https://flyinghead.github.io/flycast-builds/) |
-|  | **A** | Redream | Native | Native | Native | Native | N/A | [redream.io](https://redream.io/) |
+### macOS (Apple Silicon M-Series)
+| Generation / Console | Tier | Emulator | Video / Rendering Backend | Download / Project Source |
+| :--- | :---: | :--- | :--- | :--- |
+| **All-in-One Retro** | **S** | RetroArch | Metal / Vulkan | [retroarch.com](https://www.retroarch.com/) |
+| **GameCube / Wii** | **S** | Dolphin (Nightly) | Native Metal | [dolphin-emu.org](https://dolphin-emu.org/) |
+| **Nintendo Switch** | **S** | Ryubing (Forks) | Native Metal (via Hypervisor) | [github.com/Ryujinx](https://github.com/Ryujinx) |
+| | **A** | Eden | Vulkan / MoltenVK | [sudachiemulator.org](https://sudachiemulator.org/) |
+| **PlayStation 1** | **S** | DuckStation | Vulkan / Metal | [duckstation.org](https://www.duckstation.org/) |
+| **PlayStation 2** | **S** | PCSX2 (Nightly) | Native Metal | [pcsx2.net](https://pcsx2.net/) |
+| | **A** | ARMSX2 (MacOS) | Native Metal / ARM64 JIT | [armsx2.net](https://armsx2.net/) |
+| **PlayStation Portable**| **S** | PPSSPP | Vulkan / Metal | [ppsspp.org](https://www.ppsspp.org/) |
+| **PlayStation 3** | **S** | RPCS3 | Native ARM64 Translation | [rpcs3.net](https://rpcs3.net/) |
+| **PlayStation 4** | **S** | shadPS4 | MoltenVK / Metal translation | [shadps4.net](https://shadps4.net/) |
+
+### macOS (Legacy Intel x86_64)
+| Generation / Console | Tier | Emulator | Video / Rendering Backend | Download / Project Source |
+| :--- | :---: | :--- | :--- | :--- |
+| **All-In-One Retro** | **S** | OpenEmu | OpenGL / Metal | [openemu.org](https://openemu.org/) |
+| **GameCube / Wii** | **S** | Dolphin | OpenGL / Vulkan | [dolphin-emu.org](https://dolphin-emu.org/) |
+| **Nintendo Switch** | **S** | Ryujinx (Legacy x86) | Vulkan (Requires Dedicated AMD GPU) | [github.com/Ryujinx](https://github.com/Ryujinx) |
+| **PlayStation 1** | **S** | DuckStation | OpenGL / Vulkan | [duckstation.org](https://www.duckstation.org/) |
+| **PlayStation 2** | **S** | PCSX2 (Legacy Mac) | OpenGL | [pcsx2.net](https://pcsx2.net/) |
+| **PlayStation 3** | **S** | RPCS3 | Vulkan (Requires AVX2 Extension) | [rpcs3.net](https://rpcs3.net/) |
+| **PlayStation 4** | **S** | shadPS4 | Vulkan / MoltenVK (Discrete GPU req.) | [shadps4.net](https://shadps4.net/) |
+
+### iOS (iPhone / iPad)
+| Generation / Console | Tier | Emulator | Access Vector / Requirements | Download / Project Source |
+| :--- | :---: | :--- | :--- | :--- |
+| **All-In-One Retro** | **S** | Delta | App Store / Native UI | [deltaemulator.com](https://deltaemulator.com/) |
+| | **A** | RetroArch | App Store | [retroarch.com](https://www.retroarch.com/) |
+| **GameCube / Wii** | **S** | Dolphin iOS | Side-load (Requires JIT environment) | [dolphin-emu.org](https://dolphin-emu.org/) |
+| | **A** | Dolphiiini | App Store (JIT-less, lower performance) | [github.com/OatmealDome/Dolphiiini](https://github.com/OatmealDome/Dolphiiini) |
+| **PlayStation 1** | **S** | Gamma | App Store / Native | [gammaemulator.com](https://gammaemulator.com/) |
+| **PlayStation 2** | **S** | ARMSX2 (iOS Refresh) | Side-load (Requires AltStore/SideStore JIT) | [armsx2.net](https://armsx2.net/) |
+| **PlayStation Portable**| **S** | PPSSPP | App Store / Native | [ppsspp.org](https://www.ppsspp.org/) |
 
 ---
 
-## 3. PlayStation Platforms
+## 2. Android Ecosystem
 
-| Generation | Tier | Emulator | macOS (ARM64) | Windows (x64) | Linux (x64) | Android | iOS | Download Link |
-| --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| **PlayStation 1** | **S** | DuckStation | Native | Native | Native | Native | N/A | [duckstation.org](https://www.duckstation.org/) |
-|  | **A** | Gamma | N/A | N/A | N/A | N/A | App Store | [gammaemulator.com](https://gammaemulator.com/) |
-| **PlayStation 2** | **S** | PCSX2 (Nightly Build) | Native | Native | Native | N/A | N/A | [pcsx2.net](https://pcsx2.net/) |
-|  | **A** | ARMSX2 (Refresh) | Native | N/A | N/A | Native | Side-load | [armsx2.net](https://armsx2.net/) |
-| **PlayStation Portable** | **S** | PPSSPP | Native | Native | Native | Native | App Store | [ppsspp.org](https://www.ppsspp.org/) |
-|  | **A** | RetroArch (PPSSPP Core) | Native | Native | Native | Native | Native | [retroarch.com](https://www.retroarch.com/) |
-| **PlayStation 3** | **S** | RPCS3 | Native | Native | Native | N/A | N/A | [rpcs3.net](https://rpcs3.net/) |
-|  | **A** | ESX (Experimental) | N/A | Native | N/A | N/A | N/A | [esxemu.com](https://www.google.com/search?q=http://esxemu.com/) |
-| **PlayStation 4** | **S** | shadPS4 | Native | Native | Native | N/A | N/A | [shadps4.net](https://shadps4.net/) |
-|  | **A** | fpPS4 | N/A | Native | Native | N/A | N/A | [github.com/red-founder/fpPS4](https://www.google.com/search?q=https://github.com/red-founder/fpPS4) |
+| Generation / Console | Tier | Emulator | Video Backend / Optimization | Download / Project Source |
+| :--- | :---: | :--- | :--- | :--- |
+| **All-In-One Retro** | **S** | RetroArch | Vulkan / OpenGL ES | [retroarch.com](https://www.retroarch.com/) |
+| | **A** | Lemuroid | Simplified UI framework | [github.com/Swordfish90/Lemuroid](https://github.com/Swordfish90/Lemuroid) |
+| **Nintendo DS** | **S** | melonDS | High-accuracy layout | [melonds.kuribo64.net](https://melonds.kuribo64.net/) |
+| | **A** | DraStic | Tailored for lower-end SoC architectures | [play.google.com](https://play.google.com/store/apps/details?id=com.dsemu.drastic) |
+| **GameCube / Wii** | **S** | Dolphin (Android) | Vulkan (Supports Custom Turnip Drivers) | [dolphin-emu.org](https://dolphin-emu.org/) |
+| **Nintendo Switch** | **S** | Sudachi | Vulkan | [sudachiemulator.org](https://sudachiemulator.org/) |
+| | **A** | Uzuy | Community performance fork | Community Sourced |
+| **PlayStation 1** | **S** | DuckStation | Vulkan / Hardware Downscaling | [duckstation.org](https://www.duckstation.org/) |
+| **PlayStation 2** | **S** | ARMSX2 (Refresh) | Native ARM64 Recompiler / Vulkan | [armsx2.net](https://armsx2.net/) |
+| | **A** | NetherSX2 | Archival branch | Community Sourced |
+| **PlayStation Portable**| **S** | PPSSPP | Vulkan | [ppsspp.org](https://www.ppsspp.org/) |
 
 ---
 
-## Deployment Standards
+## 3. Desktop Systems (PC Architecture)
 
-* **iOS JIT Compilation Restrictions:** Apple restricts Just-In-Time (JIT) compilation on standard App Store apps. Emulators targeting modern architectures (Dolphin, ARMSX2) require side-loading tools (e.g., AltStore, SideStore) to enable JIT for full speed.
-* **Android Graphics Frameworks:** For maximum efficiency on mobile chipsets, utilize Vulkan rendering backends over OpenGL ES whenever possible to bypass driver overhead.
-* **ARMSX2 Native Pivot:** Mobile and Apple Silicon deployment of ARMSX2 requires selecting the native ARM64 recompiler builds over older translation binaries to ensure consistent frame pacing.
+### Windows (x64)
+| Generation / Console | Tier | Emulator | Video / Rendering Backend | Download / Project Source |
+| :--- | :---: | :--- | :--- | :--- |
+| **GameCube / Wii** | **S** | Dolphin | DirectX 12 / Vulkan | [dolphin-emu.org](https://dolphin-emu.org/) |
+| **Nintendo Switch** | **S** | Ryujinx (Legacy / Forks) | Vulkan | [github.com/Ryujinx](https://github.com/Ryujinx) |
+| | **A** | Sudachi | Vulkan | [sudachiemulator.org](https://sudachiemulator.org/) |
+| **PlayStation 2** | **S** | PCSX2 (Nightly) | DirectX 12 / Vulkan | [pcsx2.net](https://pcsx2.net/) |
+| **PlayStation 3** | **S** | RPCS3 | Vulkan / Native x86 Optimizations | [rpcs3.net](https://rpcs3.net/) |
+| **PlayStation 4** | **S** | shadPS4 | Direct Vulkan Execution | [shadps4.net](https://shadps4.net/) |
+| | **A** | fpPS4 | Compatibility Layer (Indie target focus) | [github.com/red-founder/fpPS4](https://github.com/red-founder/fpPS4) |
+
+### Linux (x64)
+| Generation / Console | Tier | Emulator | Distribution / Target Backend | Download / Project Source |
+| :--- | :---: | :--- | :--- | :--- |
+| **GameCube / Wii** | **S** | Dolphin | Flatpak / Native Vulkan | [dolphin-emu.org](https://dolphin-emu.org/) |
+| **Nintendo Switch** | **S** | Ryujinx | Native Linux Build / Vulkan | [github.com/Ryujinx](https://github.com/Ryujinx) |
+| **PlayStation 2** | **S** | PCSX2 (Nightly) | AppImage / Vulkan | [pcsx2.net](https://pcsx2.net/) |
+| **PlayStation 3** | **S** | RPCS3 | Native Vulkan Environment | [rpcs3.net](https://rpcs3.net/) |
+| **PlayStation 4** | **S** | shadPS4 | Linux Vulkan Pipeline Architecture | [shadps4.net](https://shadps4.net/) |
